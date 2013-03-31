@@ -1,0 +1,7 @@
+SICPの例題PJ
+
+実行
+     make run
+
+テスト
+     make test
