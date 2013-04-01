@@ -73,9 +73,20 @@
 (p "(abs -1)")
 (p (abs -1))
 
-;; p_1.1
-(p "# p_1.1")
-(p 10)
-(p (+ 5 3 4))
-(p (- 9 1))
-(p (/ 6 2))
+;; p_1.3
+(define (sum-of-squares-alpha x y z)
+  (cond (and (< x y) (< x z) (sum-of-squares y z))
+	(and (< y x) (< y z) (sum-of-squares x z))
+	(and (< z x) (< z y) (sum-of-squares x y))))
+
+(p (sum-of-squares-alpha 1 2 3))
+
+;; p_1.5
+(define (p) (p))
+(define (test x y)
+  (if (= x 0)
+      0
+      y))
+
+(p (test 1 (p)))
+(p (test 0 (p)))

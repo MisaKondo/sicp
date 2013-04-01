@@ -20,4 +20,18 @@
 (test* "abs 0" 0 (abs 0))
 (test* "abs -1" 1 (abs -1))
 
+(test-section "# p_1.1")
+(test* "10" 10 10)
+(test* "(+ 5 3 4)" 12 (+ 5 3 4))
+(test* "(- 9 1)" 8 (- 9 1))
+(test* "(/ 6 2)" 3 (/ 6 2))
+
+
+(test-section "# p_1.2")
+(test-section "# p_1.3")
+(test* "sum-of-squares-alpha 1 2 3" 13 (sum-of-squares-alpha 1 2 3))
+(test* "sum-of-squares-alpha 4 5 6" 61 (sum-of-squares-alpha 4 5 6))
+
+(test-section "# p_1.4")
+(test-section "# p_1.5")
 (test-end)
