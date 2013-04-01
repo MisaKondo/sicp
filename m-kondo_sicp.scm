@@ -82,11 +82,11 @@
 (p (sum-of-squares-alpha 1 2 3))
 
 ;; p_1.5
-(define (p) (p))
-(define (test x y)
-  (if (= x 0)
-      0
-      y))
+;; (define (p) (p))
+;; (define (test x y)
+;;   (if (= x 0)
+;;       0
+;;       y))
 
-(p (test 1 (p)))
-(p (test 0 (p)))
+;; (p (test 1 (p)))
+;; (p (test 0 (p)))
