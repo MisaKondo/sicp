@@ -35,6 +35,13 @@
 
 (p "(define (f a sum-of-squares (+ a 1) (* a 2)))")
 (define (f a) (sum-of-squares (+ a 1) (* a 2)))
+;;(f 5)
+;;(sum-of-square (+ 5 1) (* 5 2))
+;;(sum-of-square 6 10)
+;;(+ (square 6) (square 10))
+;;(+ (* 6 6) (* 10 10))
+;;(+ 36 100)
+;;136
 (p (f 1))
 
 ;; 1.1.5
@@ -75,18 +82,30 @@
 
 ;; p_1.3
 (define (sum-of-squares-alpha x y z)
-  (cond (and (< x y) (< x z) (sum-of-squares y z))
-	(and (< y x) (< y z) (sum-of-squares x z))
-	(and (< z x) (< z y) (sum-of-squares x y))))
+  (cond ((and (<= x y) (<= x z)) (sum-of-squares y z))
+	((and (<= y x) (<= y z)) (sum-of-squares x z))
+	((and (<= z x) (<= z y)) (sum-of-squares x y))
+;;	((and (= x y) (= x z)) (sum-of-squares x y))
+	(else (p x))))
 
 (p (sum-of-squares-alpha 1 2 3))
 
-;; p_1.5
-;; (define (p) (p))
-;; (define (test x y)
-;;   (if (= x 0)
-;;       0
-;;       y))
+;; p_1.4
+(define (a-plus-abs-b a b)
+  ((if (> b 0) + -) a b))
 
-;; (p (test 1 (p)))
-;; (p (test 0 (p)))
+(p (a-plus-abs-b 1 2))
+(p (a-plus-abs-b 1 0))
+(p (a-plus-abs-b -3 -2))
+
+;; p_1.5
+(define (g) (g))
+
+(define (test x y)
+  (if (= x 0)
+      0
+      y))
+
+;;(p (test 0 (g)))
+;; (p (test 1 (g)))
+;; 正規的

@@ -26,11 +26,15 @@
 (test* "(- 9 1)" 8 (- 9 1))
 (test* "(/ 6 2)" 3 (/ 6 2))
 
-
 (test-section "# p_1.2")
 (test-section "# p_1.3")
-(test* "sum-of-squares-alpha 1 2 3" 13 (sum-of-squares-alpha 1 2 3))
-(test* "sum-of-squares-alpha 4 5 6" 61 (sum-of-squares-alpha 4 5 6))
+(test* "2番目と3番目が大きいsum-of-squares-alpha 1 2 3" 13 (sum-of-squares-alpha 1 2 3))
+(test* "1番目と2番目が大きいsum-of-squares-alpha 3 2 1" 13 (sum-of-squares-alpha 3 2 1))
+(test* "1番目と3番目が大きいsum-of-squares-alpha 2 1 3" 13 (sum-of-squares-alpha 2 1 3))
+(test* "1~3番目の値が等しいsum-of-squares-alpha 1 1 1" 2 (sum-of-squares-alpha 1 1 1))
+(test* "1番目と2番目の値が等しいsum-of-squares-alpha 2 2 3" 13 (sum-of-squares-alpha 2 2 3))
+(test* "1番目と2番目の値が等しいsum-of-squares-alpha 2 2 1" 8 (sum-of-squares-alpha 2 2 1))
+(test* "sum-of-squares-alpha 3 2 3" 18 (sum-of-squares-alpha 3 2 3))
 
 (test-section "# p_1.4")
 (test-section "# p_1.5")
